@@ -45,18 +45,26 @@ export default function InputVideo() {
       body: JSON.stringify(body),
     });
 
-    const blob = await response.blob();
+    if (response.ok) {
+      const blob = await response.blob();
 
-    const downloadUrl = URL.createObjectURL(blob);
-    const contentDisposition = response.headers.get("X-File-Name");
+      const downloadUrl = URL.createObjectURL(blob);
+      const contentDisposition = response.headers.get("X-File-Name");
 
-    const link = document.createElement("a");
-    link.href = downloadUrl;
-    link.download = `${contentDisposition}`;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(downloadUrl);
+      const link = document.createElement("a");
+      link.href = downloadUrl;
+      link.download = `${contentDisposition}`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      URL.revokeObjectURL(downloadUrl);
+      return;
+    }
+    toast({
+      title: "Conversion error ",
+      description: "Try again",
+      variant: "destructive",
+    });
   };
 
   const validateYouTubeUrl = (url: string) => {
