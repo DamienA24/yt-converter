@@ -21,6 +21,7 @@ export default function InputVideo() {
       toast({
         title: "Invalid URL",
         description: "Please enter a valid YouTube URL.",
+        variant: "destructive",
       });
       return;
     }
@@ -28,6 +29,7 @@ export default function InputVideo() {
     toast({
       title: "Processing",
       description: "Your request is being processed.",
+      className: "bg-white",
     });
 
     const body = {
