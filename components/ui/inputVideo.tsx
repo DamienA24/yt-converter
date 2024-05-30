@@ -77,7 +77,7 @@ export default function InputVideo() {
   };
   return (
     <>
-      <div className="flex w-full mt-10 justify-center">
+      <div className="flex w-full mt-10 justify-center" id="inputVideo">
         <Input
           type="video"
           placeholder="Paste your Youtube video url"

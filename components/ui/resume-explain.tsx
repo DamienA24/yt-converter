@@ -2,39 +2,43 @@ import { Link2 } from "lucide-react";
 
 export default function ResumeExplain() {
   return (
-    <div className="mt-10 flex flex-col w-screen  bg-[#fef5fc] items-center">
-      <h1 className="text-xl font-bold mt-10">
-        Un convertisseur MP3 gratuit et multi-plateforme
+    <div className="px-2 sm:px-0 mt-10 flex flex-col w-screen bg-[#F1F1F1] items-center">
+      <h1 className="text-xl font-bold mt-10 text-center">
+        Free YouTube to MP3 Converter for All Platforms
       </h1>
-      <p className="font-bold ">
-        Simple, rapide et anonyme, notre application convertit les vidéos
-        YouTube en MP3 ou MP4.
+      <p className="font-bold text-center">
+        Simple, fast, and anonymous, our application converts YouTube videos to
+        MP3 or MP4 effortlessly.
       </p>
       <div>
         <div className="mt-10">
-          <p>Télécharger des vidéos YouTube n'a jamais été aussi simple :</p>
+          <p>Downloading YouTube videos to MP3 or MP4 has never been easier:</p>
           <ul className="list-disc mt-5 ml-5">
             <li>
-              Saisissez des mots-clés ou collez l'URL de votre vidéo YouTube.{" "}
+              Enter keywords or paste your YouTube video URL into our YouTube to
+              MP3 converter.
             </li>
-            <li>Choisissez le format (MP3 ou MP4) </li>
+            <li>Choose the format (MP3 or MP4)</li>
             <li>
-              Téléchargez votre vidéo, playlist ou short au format choisi.
+              Download your video, playlist, or short in the chosen format using
+              our MP3 YouTube converter.
             </li>
           </ul>
         </div>
 
         <div className="mt-10 mb-10">
-          <p>Puissance et simplicité :</p>
+          <p>Power and Simplicity:</p>
           <ul className="list-disc mt-5 ml-5">
             <li>
-              Compatible avec tous les appareils (smartphones, tablettes,
-              ordinateurs).
+              Compatible with all devices (smartphones, tablets, computers).
             </li>
             <li>
-              Utilise les dernières technologies pour des conversions rapides.{" "}
+              Uses the latest technologies for fast conversions with our YouTube
+              to MP4 converter.
             </li>
-            <li>Pas d'inscription, sans publicité, et anonyme.</li>
+            <li>
+              No sign-up, and anonymous with our free YouTube MP3 converter.
+            </li>
           </ul>
         </div>
       </div>

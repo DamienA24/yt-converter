@@ -4,10 +4,10 @@ export default function Footer() {
       <div className="footer-content grid grid-cols-2 justify-items-center mt-5 ">
         <ul className="footer-links">
           <li>
-            <a href="/privacy">Politique de Confidentialité</a>
+            <a href="/privacy">Privacy Policy</a>
           </li>
           <li>
-            <a href="/terms">Conditions d'Utilisation</a>
+            <a href="/terms">Terms of Use</a>
           </li>
           <li>
             <a href="/dmca">DMCA</a>
@@ -16,19 +16,19 @@ export default function Footer() {
 
         <ul className="footer-navigation">
           <li>
-            <a href="/">Accueil</a>
+            <a href="/">Home</a>
           </li>
           <li>
             <a href="http://localhost:3000/#faq">FAQ</a>
           </li>
           <li>
-            <a href="http://localhost:3000/#about">À Propos</a>
+            <a href="http://localhost:3000/#about">About</a>
           </li>
         </ul>
       </div>
       <div className="footer-copyright ">
         <p className="text-center">
-          &copy; 2024 VotreSite. Tous droits réservés.
+          &copy; 2024 VotreSite. All right reserved.
         </p>
       </div>
     </div>

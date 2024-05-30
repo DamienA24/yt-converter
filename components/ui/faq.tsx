@@ -2,46 +2,47 @@ import { Meteors } from "@/components/ui/meteors";
 
 const data = [
   {
-    question: "Combien de temps prend la conversion ?",
+    question: "How do I convert YouTube videos to MP3 using this app ?",
     response:
-      " La conversion est généralement rapide et dépend de la taille de la vidéo et de votre connexion internet.",
+      "Simply paste the YouTube video URL into the input field on our homepage and select 'Convert to MP3.' Our YouTube to MP3 converter will quickly process your request and provide a high-quality MP3 file for download.",
   },
   {
-    question: "Est-ce gratuit ?",
-    response: "Oui, notre service est entièrement gratuit et sans inscription.",
+    question: "Is the YouTube to MP3 converter free to use ?",
+    response:
+      "Yes, our YouTube to MP3 converter is completely free. You can convert and download unlimited YouTube videos to MP3 without any cost.",
   },
   {
-    question: "Quels formats sont supportés ?",
+    question: "Can I convert YouTube videos to MP4 as well ?",
     response:
-      "Nous supportons principalement les formats MP3 pour l'audio et MP4 pour la vidéo.",
-  },
-  {
-    question: "Y a-t-il des limites de taille ou de durée ?",
-    response:
-      " Nous ne recommandons pas de convertir des vidéos trop longues ou volumineuses pour assurer une conversion rapide et efficace.",
+      "Absolutely! Our app allows you to convert YouTube videos to both MP3 and MP4 formats. Just paste the video URL, choose your preferred format, and click 'Convert.'",
   },
   {
     question:
-      " Comment puis-je signaler un problème ou une vidéo non convertissable ?",
+      "What is the difference between this MP3 YouTube converter and others ?",
     response:
-      " Utilisez notre formulaire de contact dans la section Contact pour signaler tout problème ou pour obtenir de l'aide.",
+      "Our MP3 YouTube converter is designed for speed and ease of use. With a user-friendly interface and fast processing times, you can convert videos to MP3 quickly and without hassle. Additionally, our service is free and doesn't require any software installation.",
   },
   {
-    question: "Puis-je utiliser ce convertisseur sur des appareils mobiles ?",
+    question: "Are there any limits on the number of conversions ?",
     response:
-      "Oui, notre site est entièrement optimisé pour les appareils mobiles. Vous pouvez convertir et télécharger des vidéos directement depuis votre smartphone ou tablette, avec la même facilité que sur un ordinateur de bureau.",
+      "No, there are no limits on the number of conversions you can perform. You can use our YouTube MP3 converter as many times as you need, for free.",
+  },
+  {
+    question: "Is it safe to use this YouTube to MP3 converter ?",
+    response:
+      "Yes, our YouTube to MP3 converter is safe and secure. We prioritize user privacy and ensure that all conversions are done without compromising your data.",
   },
 ];
 export default function Faq() {
   return (
     <div className="mt-10 flex flex-col" id="faq">
       <h1 className="text-xl font-bold text-center">
-        Un convertisseur Tiktok, YouTube, Twitter, et bien d'autres!
+        A Free YouTube to MP3 Converter
       </h1>
-      <div className="grid grid-cols-3 grid-rows-2 gap-y-4 justify-items-center mt-10">
+      <div className="grid lg:grid-cols-3  lg:grid-rows-2 gap-y-4 justify-items-center mt-10">
         {data.map((value, index) => {
           return (
-            <div className=" w-full relative max-w-md" key={index}>
+            <div className="w-11/12 sm:w-full relative max-w-md" key={index}>
               <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
               <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
                 <h1 className="font-bold text-xl text-white mb-4 relative z-50">
