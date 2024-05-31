@@ -12,6 +12,9 @@ export default function Footer() {
           <li>
             <a href="/dmca">DMCA</a>
           </li>
+          <li>
+            <a href="/sitemap.xml">Sitemap</a>
+          </li>
         </ul>
 
         <ul className="footer-navigation">
