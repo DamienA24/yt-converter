@@ -1,3 +1,20 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FAQ - YouTube to MP3 and MP4 Converter",
+  description:
+    "Find answers to frequently asked questions about our YouTube to MP3 and MP4 converter. Learn how to use our free and easy converter.",
+  applicationName: "YoutubeToMp3 Converter pro",
+  keywords: [
+    "YouTube to MP3 converter",
+    "YouTube to MP4 converter",
+    "Free YouTube converter",
+    "youtube to mp4 converter --",
+    "youtube to mp3 converter --",
+  ],
+  creator: "YoutubeToMp3 Converter pro Team",
+  publisher: "YoutubeToMp3 Converter pro",
+};
 export default function Faq() {
   return (
     <div className="mt-10 flex flex-col w-screen  items-center">

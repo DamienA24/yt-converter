@@ -1,3 +1,20 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us - YouTube to MP3 and MP4 Converter",
+  description:
+    "Learn more about our YouTube to MP3 and MP4 converter. Our mission is to provide a free, fast, and easy way to convert YouTube videos.",
+  applicationName: "YoutubeToMp3 Converter pro",
+  keywords: [
+    "YouTube to MP3 converter",
+    "YouTube to MP4 converter",
+    "Free YouTube converter",
+    "youtube to mp4 converter --",
+    "youtube to mp3 converter --",
+  ],
+  creator: "YoutubeToMp3 Converter pro Team",
+  publisher: "YoutubeToMp3 Converter pro",
+};
 export default function About() {
   return (
     <div className="flex flex-col items-center py-10">
