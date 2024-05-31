@@ -19,10 +19,16 @@ export default function Footer() {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="http://localhost:3000/#faq">FAQ</a>
+            <a href="/faq">FAQ</a>
           </li>
           <li>
-            <a href="http://localhost:3000/#about">About</a>
+            <a href="/about">About</a>
+          </li>
+          <li>
+            <a href="/youtube-to-mp4">Youtube to mp4</a>
+          </li>
+          <li>
+            <a href="/youtube-to-mp3">Youtube to mp3</a>
           </li>
         </ul>
       </div>

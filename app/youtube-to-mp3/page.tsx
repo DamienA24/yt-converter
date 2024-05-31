@@ -3,9 +3,6 @@ import ResumeExplain from "@/components/ui/resume-explain";
 import InputVideo from "@/components/ui/inputVideo";
 import Globe from "@/components/ui/globe";
 import Faq from "@/components/ui/faq";
-import Features from "@/components/ui/features";
-import TutorialGeneral from "@/components/ui/tutorialGeneral";
-import FaqGeneral from "@/components/ui/faqGeneral";
 
 export default function Home() {
   return (
@@ -19,9 +16,9 @@ export default function Home() {
         <Globe />
       </div>
 
-      <Features />
-      <TutorialGeneral />
-      <FaqGeneral />
+      <ExplainConvert format={"mp3"} />
+      <Faq format={"mp3"} />
+      <ResumeExplain format={"mp3"} />
     </main>
   );
 }
