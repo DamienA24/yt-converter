@@ -68,8 +68,8 @@ export default function Terms() {
 
       <h3 className="text-2xl font-semibold mb-2">9. Contact</h3>
       <p>
-        For questions regarding these terms, please contact us at [email
-        address].
+        For questions regarding these terms, please contact us at
+        ytbtomp3converterpro@gmail.com
       </p>
     </div>
   );

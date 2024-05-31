@@ -46,7 +46,7 @@ export default function Dmca() {
         address:
       </p>
       <p className="mb-4">
-        <strong>Email:</strong> [DMCA Agent Email]
+        <strong>Email:</strong> ytbtomp3converterpro@gmail.com
       </p>
 
       <h3 className="text-2xl font-semibold mb-2">Counter-Notification:</h3>
@@ -81,7 +81,7 @@ export default function Dmca() {
         Designated Agent Contact Information:
       </h3>
       <p className="mb-4">
-        <strong>Email:</strong> [DMCA Agent Email]
+        <strong>Email:</strong> ytbtomp3converterpro@gmail.com
       </p>
     </div>
   );

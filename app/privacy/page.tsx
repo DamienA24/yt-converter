@@ -63,8 +63,8 @@ export default function Privacy() {
 
       <h3 className="text-2xl font-semibold mb-2">8. Contact</h3>
       <p>
-        For questions regarding this policy, please contact us at [email
-        address].
+        For questions regarding this policy, please contact us at
+        ytbtomp3converterpro@gmail.com
       </p>
     </div>
   );
