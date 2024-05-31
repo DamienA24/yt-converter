@@ -54,9 +54,9 @@ export default function Terms() {
       <h3 className="text-2xl font-semibold mb-2">7. Indemnification</h3>
       <p className="mb-4">
         Users agree to indemnify and hold us harmless from any claim or demand,
-        including reasonable attorneys' fees, made by any third party due to or
-        arising out of users' breach of these terms, or violation of any law or
-        the rights of a third party.
+        including reasonable attorneys&apos; fees, made by any third party due
+        to or arising out of users&apos; breach of these terms, or violation of
+        any law or the rights of a third party.
       </p>
 
       <h3 className="text-2xl font-semibold mb-2">8. Changes to Terms</h3>

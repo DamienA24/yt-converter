@@ -26,7 +26,7 @@ export default function Faq() {
           </h2>
           <p>
             Enter the YouTube video URL into our YouTube to MP3 converter,
-            select MP3 as the format, and click "Convert."
+            select MP3 as the format, and click &apos;Convert.&apos;
           </p>
         </div>
         <div className="mb-5">

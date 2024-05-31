@@ -22,8 +22,8 @@ export default function About() {
       <div className="w-3/4 bg-white p-6 rounded-lg shadow-md">
         <p className="text-lg mb-4">
           Welcome to our YouTube to MP3 Converter, your number one source for
-          converting YouTube videos to MP3 and MP4 formats. We're dedicated to
-          giving you the best experience, focusing on simplicity, speed, and
+          converting YouTube videos to MP3 and MP4 formats. We&apos;re dedicated
+          to giving you the best experience, focusing on simplicity, speed, and
           security.
         </p>
         <p className="text-lg mb-4">
@@ -48,7 +48,7 @@ export default function About() {
         <p className="text-lg mb-4">
           We hope you enjoy our YouTube to MP3 Converter as much as we enjoy
           offering it to you. If you have any questions or comments, please
-          don't hesitate to contact us.
+          don&apos;t hesitate to contact us.
         </p>
         <p className="text-lg font-bold">
           Sincerely,

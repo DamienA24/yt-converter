@@ -59,8 +59,8 @@ export default function FaqGeneral() {
           </h2>
           <p className="text-lg">
             Simply paste the URL of the video you want to convert, select the
-            desired format (MP3 or MP4), and click "Convert." Your file will be
-            ready for download shortly.
+            desired format (MP3 or MP4), and click &apos;Convert&apos;. Your
+            file will be ready for download shortly.
           </p>
         </div>
 
