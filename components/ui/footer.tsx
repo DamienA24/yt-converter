@@ -37,7 +37,7 @@ export default function Footer() {
       </div>
       <div className="footer-copyright ">
         <p className="text-center">
-          &copy; 2024 VotreSite. All right reserved.
+          &copy; 2024 YouTubeToMP3 Converter Pro. All right reserved.
         </p>
       </div>
     </div>
