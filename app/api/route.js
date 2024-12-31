@@ -1,46 +1,103 @@
 import ytdl from "ytdl-core";
-import { getVideoMP3Base64 } from "yt-get";
+import { NextResponse } from "next/server";
 
 export async function POST(request) {
   try {
     const { videoUrl, format } = await request.json();
+    const info = await ytdl.getInfo(videoUrl);
+
+    console.log("Processing URL:", videoUrl, "Format:", format);
 
     if (ytdl.validateURL(videoUrl)) {
-      let data;
-      const info = await ytdl.getBasicInfo(videoUrl);
-
       try {
         if (format === "mp3") {
-          const { base64 } = await getVideoMP3Base64(videoUrl);
-          data = Buffer.from(base64, "base64");
+          console.log("Getting video info...");
+          console.log("Got video info");
+
+          const audioFormats = ytdl.filterFormats(info.formats, "audioonly");
+          console.log("Available audio formats:", audioFormats.length);
+
+          // Choisir le meilleur format audio
+          const audioFormat = audioFormats.reduce((prev, curr) => {
+            return (prev.audioBitrate || 0) > (curr.audioBitrate || 0)
+              ? prev
+              : curr;
+          });
+
+          console.log("Selected audio format:", audioFormat.itag);
+
+          const stream = ytdl(videoUrl, {
+            format: audioFormat,
+            filter: "audioonly",
+            quality: "highestaudio",
+            requestOptions: {
+              headers: {
+                "User-Agent":
+                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+              },
+            },
+          });
+
+          return new NextResponse(stream, {
+            status: 200,
+            headers: {
+              "Content-Type": "audio/mpeg",
+              "Content-Disposition": `attachment; filename="${info.videoDetails.title.replace(
+                /[^\x00-\x7F]/g,
+                ""
+              )}.mp3"`,
+              "X-File-Name": `${info.videoDetails.title.replace(
+                /[^\x00-\x7F]/g,
+                ""
+              )}.mp3`,
+            },
+          });
         } else {
-          data = ytdl(videoUrl);
+          const stream = ytdl(videoUrl, {
+            quality: "highest",
+            filter: "audioandvideo",
+            requestOptions: {
+              headers: {
+                "User-Agent":
+                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+              },
+            },
+          });
+          console.log("info", info.videoDetails.title);
+
+          return new NextResponse(stream, {
+            status: 200,
+            headers: {
+              "Content-Type": "video/mp4",
+              "Content-Disposition": `attachment; filename="${info.videoDetails.title.replace(
+                /[^\x00-\x7F]/g,
+                ""
+              )}.mp4"`,
+              "X-File-Name": `${info.videoDetails.title.replace(
+                /[^\x00-\x7F]/g,
+                ""
+              )}.mp4`, // Custom header to include the file name
+            },
+          });
         }
-      } catch (conversionError) {
-        return new Response(
-          `Error converting video to ${format}: ${conversionError.message}`,
-          {
-            status: 500,
-          }
+      } catch (error) {
+        console.error("Error in processing:", error);
+        return NextResponse.json(
+          { error: "Error processing video: " + error.message },
+          { status: 500 }
         );
       }
-
-      let titleVideo = info.videoDetails.title;
-      titleVideo = titleVideo.replace(/[^\x00-\x7F]/g, "");
-
-      return new Response(data, {
-        headers: {
-          "Content-Disposition": `attachment; filename="${titleVideo}.${format}"`,
-          "Content-Type": format === "mp3" ? "audio/mpeg" : "video/mp4",
-          "X-File-Name": `${titleVideo}.${format}`, // Custom header to include the file name
-        },
-      });
     } else {
-      return new Response("Invalid URL", { status: 400 });
+      return NextResponse.json(
+        { error: "Invalid YouTube URL" },
+        { status: 400 }
+      );
     }
   } catch (error) {
-    return new Response(`Error processing request: ${error.message}`, {
-      status: 500,
-    });
+    console.error("Error in request:", error);
+    return NextResponse.json(
+      { error: "An error occurred while processing the request" },
+      { status: 500 }
+    );
   }
 }

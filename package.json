@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-toast": "^1.1.5",
@@ -25,7 +26,7 @@
     "tailwindcss-animate": "^1.0.7",
     "yt-converter": "^2.0.2",
     "yt-get": "^1.1.2",
-    "ytdl-core": "^4.11.5",
+    "ytdl-core": "npm:@distube/ytdl-core@^4.15.8",
     "ytdl-mp3": "^3.4.1"
   },
   "devDependencies": {

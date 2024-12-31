@@ -1,5 +1,16 @@
-User-Agent: *
+User-agent: *
 Allow: /
+Allow: /youtube-to-mp3
+Allow: /youtube-to-mp4
+Allow: /about
+Allow: /faq
+Allow: /how-to-convert
+Allow: /privacy
+Allow: /terms
+Allow: /dmca
+Disallow: /api/
+Disallow: /_next/
 Disallow: /private/
 
+# Sitemaps
 Sitemap: https://www.youtubetomp3converterpro.com/sitemap.xml

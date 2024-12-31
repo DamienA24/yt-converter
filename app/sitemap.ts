@@ -5,32 +5,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://www.youtubetomp3converterpro.com",
       lastModified: new Date(),
-      changeFrequency: "daily",
+      changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: "https://www.youtubetomp3converterpro.com/youtube-to-mp3",
       lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: "https://www.youtubetomp3converterpro.com/youtube-to-mp4",
       lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 1,
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
-      url: "https://www.youtubetomp3converterpro.com/about",
+      url: "https://www.youtubetomp3converterpro.com/how-to-convert",
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.7,
+      changeFrequency: "monthly",
+      priority: 0.8,
     },
     {
       url: "https://www.youtubetomp3converterpro.com/faq",
       lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.8,
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
+    {
+      url: "https://www.youtubetomp3converterpro.com/about",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: "https://www.youtubetomp3converterpro.com/privacy",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: "https://www.youtubetomp3converterpro.com/terms",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: "https://www.youtubetomp3converterpro.com/dmca",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    }
   ];
 }
